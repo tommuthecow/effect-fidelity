@@ -1,0 +1,25 @@
+{
+ "train": {
+  "seconds": 1387.6,
+  "examples": 480,
+  "resumed_at": 0,
+  "loss_first40": 2.592773849517107,
+  "loss_last40": 2.08831205740571
+ },
+ "sims_raw": {
+  "seconds": 1120.8,
+  "calls": 2117
+ },
+ "sims_ft": {
+  "seconds": 675.4,
+  "calls": 2116
+ },
+ "ppi_raw": {
+  "seconds": 1299.3,
+  "calls": 5209
+ },
+ "ppi_ft": {
+  "seconds": 1708.3,
+  "calls": 5209
+ }
+}

@@ -1,0 +1,10 @@
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+matplotlib>=3.8
+reportlab>=4.0
+mlflow-skinny>=3.0
+pytest>=8
+ppi-python>=0.2  # tests only: cross-checks our PPI++ against the reference implementation
+anthropic>=0.40  # only for --simulator claude-api (API); the Claude Code CLI path does not need it
+# llama-cpp-python (CPU wheel) is installed by reproduce.sh from the abetlen CPU index

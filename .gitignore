@@ -1,0 +1,37 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+.env
+.env.*
+*.key
+*.pem
+secrets*
+.DS_Store
+data/raw/ml1/Data/CleanedDataset.sav
+
+# Not redistributed (no explicit redistribution license); fetch_data.py downloads them
+data/raw/hillstrom.csv
+data/raw/GSS2018.dta
+data/raw/gss20*.zip
+data/raw/socsci210.parquet
+
+# local run artifacts
+mlruns/
+*.log
+.ipynb_checkpoints/
+# ML1: only the cleaned values file is kept; the rest comes from the OSF zip (reproduce.sh / fetch_data.py)
+data/raw/ml1.zip
+data/raw/ml1/Data/*Full_Dataset*
+data/raw/ml1/Data/*labels.dat
+data/raw/measures_us.*
+data/raw/syntax.sps
+data/ft/
+data/cache/claude-*
+data/cache/qwen15hf_*

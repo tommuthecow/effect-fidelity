@@ -1,0 +1,219 @@
+{
+ "effects": [
+  {
+   "simulator": "qwen15hf_raw_persona",
+   "n_exp": 17,
+   "mae_d_raw": 0.513995894897319,
+   "mae_d_corrected": 0.2684214697335745,
+   "wrong_call_raw": 0.6470588235294118,
+   "wrong_call_corrected": 0.7647058823529411,
+   "coverage_raw": 0.47058823529411764,
+   "coverage_corrected": 0.9411764705882353,
+   "calib_slope": 0.6885386928223383,
+   "pearson_r": 0.3331118007575574,
+   "sign_agreement": 0.6923076923076923,
+   "median_effect_ratio": 0.11291181145998923,
+   "false_alarm_rate_on_nulls": 0.25
+  },
+  {
+   "simulator": "qwen15hf_ft_persona",
+   "n_exp": 17,
+   "mae_d_raw": 0.4531645405403565,
+   "mae_d_corrected": 0.28451813697084416,
+   "wrong_call_raw": 0.7058823529411765,
+   "wrong_call_corrected": 0.7647058823529411,
+   "coverage_raw": 0.47058823529411764,
+   "coverage_corrected": 0.9411764705882353,
+   "calib_slope": 0.5375801382520464,
+   "pearson_r": 0.3392373065305858,
+   "sign_agreement": 0.6923076923076923,
+   "median_effect_ratio": 0.1717891232518476,
+   "false_alarm_rate_on_nulls": 0.25
+  },
+  {
+   "simulator": "claude_persona",
+   "n_exp": 17,
+   "mae_d_raw": 0.2832692540190578,
+   "mae_d_corrected": 0.23776613151234346,
+   "wrong_call_raw": 0.5294117647058824,
+   "wrong_call_corrected": 0.6470588235294118,
+   "coverage_raw": 0.7647058823529411,
+   "coverage_corrected": 0.9411764705882353,
+   "calib_slope": 1.0587089418385767,
+   "pearson_r": 0.7311597468033944,
+   "sign_agreement": 0.7692307692307693,
+   "median_effect_ratio": 1.083953390015897,
+   "false_alarm_rate_on_nulls": 0.0
+  }
+ ],
+ "ppi": {
+  "claude_persona": {
+   "rho_median": 0.13740384144472056,
+   "rho_max": 0.6185821177388307,
+   "by_n": {
+    "25": {
+     "real_wrong": 0.5527450980392157,
+     "ppi_wrong": 0.545686274509804,
+     "real_cov": 0.9519607843137255,
+     "ppi_cov": 0.9474509803921568,
+     "width_ratio": 0.9864872140646864,
+     "n_eff_median": 20.551667939259993,
+     "gain_median": 1.0275833969629997,
+     "gain_max": 1.3561049671624947,
+     "n_used_median": 20.0
+    }
+   },
+   "sim_only_wrong": 0.5882352941176471,
+   "sim_only_cov": 0.23529411764705882,
+   "n_exp": 17
+  },
+  "qwen15hf_ft_persona": {
+   "rho_median": 0.020904674838551063,
+   "rho_max": 0.08170401208735188,
+   "by_n": {
+    "25": {
+     "real_wrong": 0.5525490196078432,
+     "ppi_wrong": 0.5517647058823529,
+     "real_cov": 0.9341176470588236,
+     "ppi_cov": 0.9305882352941177,
+     "width_ratio": 0.9946079915779982,
+     "n_eff_median": 25.27179673565329,
+     "gain_median": 1.0108718694261316,
+     "gain_max": 1.0302952162638463,
+     "n_used_median": 25.0
+    },
+    "50": {
+     "real_wrong": 0.44509803921568625,
+     "ppi_wrong": 0.4456862745098039,
+     "real_cov": 0.9498039215686276,
+     "ppi_cov": 0.9490196078431372,
+     "width_ratio": 0.9965053044621572,
+     "n_eff_median": 50.3513100618366,
+     "gain_median": 1.007026201236732,
+     "gain_max": 1.0181895137197978,
+     "n_used_median": 50.0
+    },
+    "100": {
+     "real_wrong": 0.32509803921568625,
+     "ppi_wrong": 0.3241176470588235,
+     "real_cov": 0.9549019607843136,
+     "ppi_cov": 0.9552941176470587,
+     "width_ratio": 0.998953741821055,
+     "n_eff_median": 100.20958049135918,
+     "gain_median": 1.0020958049135917,
+     "gain_max": 1.0125157931463329,
+     "n_used_median": 100.0
+    }
+   },
+   "sim_only_wrong": 0.7058823529411765,
+   "sim_only_cov": 0.17647058823529413,
+   "n_exp": 17
+  },
+  "qwen15hf_raw_persona": {
+   "rho_median": -0.01718100991305865,
+   "rho_max": 0.21209840126891877,
+   "by_n": {
+    "25": {
+     "real_wrong": 0.5476470588235294,
+     "ppi_wrong": 0.545686274509804,
+     "real_cov": 0.9441176470588236,
+     "ppi_cov": 0.9423529411764706,
+     "width_ratio": 0.994246165293448,
+     "n_eff_median": 25.290193918321595,
+     "gain_median": 1.0116077567328638,
+     "gain_max": 1.0276646539985679,
+     "n_used_median": 25.0
+    },
+    "50": {
+     "real_wrong": 0.4580392156862745,
+     "ppi_wrong": 0.4592156862745098,
+     "real_cov": 0.9550980392156864,
+     "ppi_cov": 0.9539215686274509,
+     "width_ratio": 0.9966426879792081,
+     "n_eff_median": 50.337429533988356,
+     "gain_median": 1.006748590679767,
+     "gain_max": 1.0217299264521402,
+     "n_used_median": 50.0
+    },
+    "100": {
+     "real_wrong": 0.32862745098039214,
+     "ppi_wrong": 0.3276470588235294,
+     "real_cov": 0.9586274509803921,
+     "ppi_cov": 0.9592156862745097,
+     "width_ratio": 0.9991519254932346,
+     "n_eff_median": 100.16983091470706,
+     "gain_median": 1.0016983091470706,
+     "gain_max": 1.0152695706301615,
+     "n_used_median": 100.0
+    }
+   },
+   "sim_only_wrong": 0.6470588235294118,
+   "sim_only_cov": 0.17647058823529413,
+   "n_exp": 17
+  }
+ },
+ "costs": [
+  {
+   "simulator": "Qwen2.5-1.5B base, personas",
+   "sec_per_call_measured": 0.5294284364666981,
+   "calls_per_respondent": 1.0377450980392158,
+   "cpu_hours_per_1k": 0.15261437908496733,
+   "usd_per_1k_cpu_est": 0.053415032679738565,
+   "usd_per_1k_gpu_est": 0.003052287581699347,
+   "usd_per_1k_api_est": NaN
+  },
+  {
+   "simulator": "Qwen2.5-1.5B + SocSci210 LoRA (fine-tuned), personas",
+   "sec_per_call_measured": 0.3191871455576559,
+   "calls_per_respondent": 1.0372549019607844,
+   "cpu_hours_per_1k": 0.09196623093681917,
+   "usd_per_1k_cpu_est": 0.03218818082788671,
+   "usd_per_1k_gpu_est": 0.0018393246187363836,
+   "usd_per_1k_api_est": NaN
+  },
+  {
+   "simulator": "One-off: LoRA training (480 examples)",
+   "sec_per_call_measured": NaN,
+   "calls_per_respondent": NaN,
+   "cpu_hours_per_1k": 0.3854444444444444,
+   "usd_per_1k_cpu_est": 0.13490555555555553,
+   "usd_per_1k_gpu_est": 0.007708888888888889,
+   "usd_per_1k_api_est": NaN
+  },
+  {
+   "simulator": "Claude (claude-sonnet-5-5) via API",
+   "sec_per_call_measured": NaN,
+   "calls_per_respondent": 1.0375,
+   "cpu_hours_per_1k": NaN,
+   "usd_per_1k_cpu_est": NaN,
+   "usd_per_1k_gpu_est": NaN,
+   "usd_per_1k_api_est": 0.9067750000000001
+  }
+ ],
+ "timing": {
+  "train": {
+   "seconds": 1387.6,
+   "examples": 480,
+   "resumed_at": 0,
+   "loss_first40": 2.592773849517107,
+   "loss_last40": 2.08831205740571
+  },
+  "sims_raw": {
+   "seconds": 1120.8,
+   "calls": 2117
+  },
+  "sims_ft": {
+   "seconds": 675.4,
+   "calls": 2116
+  },
+  "ppi_raw": {
+   "seconds": 1299.3,
+   "calls": 5209
+  },
+  "ppi_ft": {
+   "seconds": 1708.3,
+   "calls": 5209
+  }
+ },
+ "notes": "Costs are ESTIMATES: measured CPU seconds per call x assumed cloud price; see ft_eval.py constants."
+}

@@ -1,0 +1,266 @@
+{
+  "headline": "Per-question accuracy does not guarantee effect accuracy. Across the 5 simulators, 23 simulated experiments had both arms within TVD 0.15 of the real answer distributions, yet 13 of those still led to the wrong ship/no-ship call (e.g. Hillstrom women's email, blind prompt: both arms within TVD 0.15, simulated lift 15.3 pp vs. real 4.5 pp; GSS 'assistance to Black people' wording, Llama: both arms within TVD 0.11, simulated +1.3 pp vs. real -6.7 pp). For the simulator with the best per-arm accuracy (Claude Opus 5.5, real-respondent personas, mean arm TVD 0.15), the calibration slope of simulated on real effects was 1.06 (1.0 = right size), its 95% intervals covered the real effect in 76% of 17 experiments, and a held-out recalibration raised coverage to 94%. The small open models shrank effects toward zero (slopes 0.06-0.42); Claude got the size about right (slopes 1.03-1.06) but was still often wrong about direction or significance. Effect-level checks complement distribution-level ones.",
+  "scores": {
+    "qwen15_blind": {
+      "mean_arm_tvd": 0.30652465506069915,
+      "share_arms_tvd_below_015": 0.29411764705882354,
+      "n_exp_both_arms_tvd_below_015": 3,
+      "wrong_call_rate_when_both_arms_good": 0.3333333333333333,
+      "abs_effect_error_d_when_both_arms_good": 0.14420497507835897,
+      "corr_arm_tvd_vs_effect_error": 0.4642614985267613,
+      "n_experiments": 17,
+      "n_true_nonnull": 13,
+      "n_true_null": 4,
+      "sign_agreement": 0.6153846153846154,
+      "median_effect_ratio": 0.23416713184990776,
+      "median_abs_ratio": 0.4120981905512677,
+      "share_inflated_2x": 0.23076923076923078,
+      "share_shrunk_half": 0.6153846153846154,
+      "calib_slope": 0.42445174694398663,
+      "pearson_r": 0.288738994667212,
+      "spearman_rho": 0.26470588235294124,
+      "mae_d": 0.425102735275466,
+      "ci_coverage": 0.29411764705882354,
+      "wrong_call_rate": 0.7058823529411765,
+      "wrong_winner_rate": 0.0,
+      "false_alarm_rate_on_nulls": 0.5
+    },
+    "qwen15_persona": {
+      "mean_arm_tvd": 0.31593895529716387,
+      "share_arms_tvd_below_015": 0.29411764705882354,
+      "n_exp_both_arms_tvd_below_015": 3,
+      "wrong_call_rate_when_both_arms_good": 0.6666666666666666,
+      "abs_effect_error_d_when_both_arms_good": 0.07837857174656725,
+      "corr_arm_tvd_vs_effect_error": 0.3389687232513717,
+      "n_experiments": 17,
+      "n_true_nonnull": 13,
+      "n_true_null": 4,
+      "sign_agreement": 0.6923076923076923,
+      "median_effect_ratio": 0.1717891232518476,
+      "median_abs_ratio": 0.3975800711743772,
+      "share_inflated_2x": 0.15384615384615385,
+      "share_shrunk_half": 0.6923076923076923,
+      "calib_slope": 0.29278540024342664,
+      "pearson_r": 0.19294331524045852,
+      "spearman_rho": 0.17892156862745098,
+      "mae_d": 0.42273408051902134,
+      "ci_coverage": 0.47058823529411764,
+      "wrong_call_rate": 0.6470588235294118,
+      "wrong_winner_rate": 0.15384615384615385,
+      "false_alarm_rate_on_nulls": 0.0
+    },
+    "llama32_1b_persona": {
+      "mean_arm_tvd": 0.29302213900697455,
+      "share_arms_tvd_below_015": 0.17647058823529413,
+      "n_exp_both_arms_tvd_below_015": 1,
+      "wrong_call_rate_when_both_arms_good": 1.0,
+      "abs_effect_error_d_when_both_arms_good": 0.16136150342095323,
+      "corr_arm_tvd_vs_effect_error": 0.0231658717562042,
+      "n_experiments": 17,
+      "n_true_nonnull": 13,
+      "n_true_null": 4,
+      "sign_agreement": 0.46153846153846156,
+      "median_effect_ratio": -0.1639169922949356,
+      "median_abs_ratio": 0.7369233698150267,
+      "share_inflated_2x": 0.15384615384615385,
+      "share_shrunk_half": 0.38461538461538464,
+      "calib_slope": 0.058331552566174186,
+      "pearson_r": 0.048604564435742126,
+      "spearman_rho": 0.02696078431372549,
+      "mae_d": 0.41030975659300606,
+      "ci_coverage": 0.47058823529411764,
+      "wrong_call_rate": 0.5294117647058824,
+      "wrong_winner_rate": 0.15384615384615385,
+      "false_alarm_rate_on_nulls": 0.25
+    },
+    "claude_blind": {
+      "mean_arm_tvd": 0.16849915824753073,
+      "share_arms_tvd_below_015": 0.5882352941176471,
+      "n_exp_both_arms_tvd_below_015": 8,
+      "wrong_call_rate_when_both_arms_good": 0.375,
+      "abs_effect_error_d_when_both_arms_good": 0.21130670865800147,
+      "corr_arm_tvd_vs_effect_error": 0.6034968727356316,
+      "n_experiments": 17,
+      "n_true_nonnull": 13,
+      "n_true_null": 4,
+      "sign_agreement": 0.6923076923076923,
+      "median_effect_ratio": 0.7543152890435465,
+      "median_abs_ratio": 1.5421638141809293,
+      "share_inflated_2x": 0.15384615384615385,
+      "share_shrunk_half": 0.15384615384615385,
+      "calib_slope": 1.025374420928406,
+      "pearson_r": 0.5328713767658286,
+      "spearman_rho": 0.5857843137254902,
+      "mae_d": 0.43272218427728454,
+      "ci_coverage": 0.7647058823529411,
+      "wrong_call_rate": 0.47058823529411764,
+      "wrong_winner_rate": 0.15384615384615385,
+      "false_alarm_rate_on_nulls": 0.0
+    },
+    "claude_persona": {
+      "mean_arm_tvd": 0.15356560418127452,
+      "share_arms_tvd_below_015": 0.5882352941176471,
+      "n_exp_both_arms_tvd_below_015": 8,
+      "wrong_call_rate_when_both_arms_good": 0.75,
+      "abs_effect_error_d_when_both_arms_good": 0.22033163804167305,
+      "corr_arm_tvd_vs_effect_error": 0.14539767081505642,
+      "n_experiments": 17,
+      "n_true_nonnull": 13,
+      "n_true_null": 4,
+      "sign_agreement": 0.7692307692307693,
+      "median_effect_ratio": 1.083953390015897,
+      "median_abs_ratio": 1.1542932112252016,
+      "share_inflated_2x": 0.15384615384615385,
+      "share_shrunk_half": 0.07692307692307693,
+      "calib_slope": 1.0587089418385767,
+      "pearson_r": 0.7311597468033944,
+      "spearman_rho": 0.698529411764706,
+      "mae_d": 0.2832692540190578,
+      "ci_coverage": 0.7647058823529411,
+      "wrong_call_rate": 0.5294117647058824,
+      "wrong_winner_rate": 0.0,
+      "false_alarm_rate_on_nulls": 0.0
+    }
+  },
+  "recalibration": {
+    "qwen15_blind": {
+      "mae_d_raw": 0.425102735275466,
+      "mae_d_corrected": 0.2588032061965786,
+      "coverage_raw": 0.29411764705882354,
+      "coverage_corrected": 0.9411764705882353,
+      "wrong_call_raw": 0.7058823529411765,
+      "wrong_call_corrected": 0.7647058823529411,
+      "median_scale_c": 0.28124515345070733,
+      "median_tau_d": 0.38548986237088917
+    },
+    "qwen15_persona": {
+      "mae_d_raw": 0.42273408051902134,
+      "mae_d_corrected": 0.2779168004290007,
+      "coverage_raw": 0.47058823529411764,
+      "coverage_corrected": 0.8823529411764706,
+      "wrong_call_raw": 0.6470588235294118,
+      "wrong_call_corrected": 0.7647058823529411,
+      "median_scale_c": 0.22006053776422432,
+      "median_tau_d": 0.39729002520138984
+    },
+    "llama32_1b_persona": {
+      "mae_d_raw": 0.41030975659300606,
+      "mae_d_corrected": 0.3046197307030069,
+      "coverage_raw": 0.47058823529411764,
+      "coverage_corrected": 0.8823529411764706,
+      "wrong_call_raw": 0.5294117647058824,
+      "wrong_call_corrected": 0.7647058823529411,
+      "median_scale_c": 0.19401573964409352,
+      "median_tau_d": 0.40897816000320236
+    },
+    "claude_blind": {
+      "mae_d_raw": 0.43272218427728454,
+      "mae_d_corrected": 0.28963200383420185,
+      "coverage_raw": 0.7647058823529411,
+      "coverage_corrected": 0.8823529411764706,
+      "wrong_call_raw": 0.47058823529411764,
+      "wrong_call_corrected": 0.7647058823529411,
+      "median_scale_c": 0.2885383117236251,
+      "median_tau_d": 0.35541783205560806
+    },
+    "claude_persona": {
+      "mae_d_raw": 0.2832692540190578,
+      "mae_d_corrected": 0.23776613151234346,
+      "coverage_raw": 0.7647058823529411,
+      "coverage_corrected": 0.9411764705882353,
+      "wrong_call_raw": 0.5294117647058824,
+      "wrong_call_corrected": 0.6470588235294118,
+      "median_scale_c": 0.5536603798178821,
+      "median_tau_d": 0.21576453654342428
+    }
+  },
+  "audit": {
+    "matched_n": 25,
+    "by_simulator": {
+      "claude_blind": {
+        "n_sim": 25,
+        "wrong_call_matched": 0.47058823529411764,
+        "coverage_matched": 0.7647058823529411,
+        "direction_agreement": 0.6923076923076923,
+        "effect_corr": 0.5328713767658286
+      },
+      "claude_persona": {
+        "n_sim": 25,
+        "wrong_call_matched": 0.5882352941176471,
+        "coverage_matched": 0.7647058823529411,
+        "direction_agreement": 0.7692307692307693,
+        "effect_corr": 0.7311597468033944
+      },
+      "llama32_1b_persona": {
+        "n_sim": 150,
+        "wrong_call_matched": 0.6299999999999999,
+        "coverage_matched": 0.6938235294117647,
+        "direction_agreement": 0.46153846153846156,
+        "effect_corr": 0.048604564435742126
+      },
+      "qwen15_blind": {
+        "n_sim": 150,
+        "wrong_call_matched": 0.6448529411764706,
+        "coverage_matched": 0.6451470588235295,
+        "direction_agreement": 0.6153846153846154,
+        "effect_corr": 0.288738994667212
+      },
+      "qwen15_persona": {
+        "n_sim": 150,
+        "wrong_call_matched": 0.6423529411764705,
+        "coverage_matched": 0.6335294117647059,
+        "direction_agreement": 0.6923076923076923,
+        "effect_corr": 0.19294331524045852
+      }
+    },
+    "baselines": {
+      "n_exp": 17,
+      "n_real_positive": 10,
+      "n_real_negative": 3,
+      "n_real_null": 4,
+      "always_no_difference": 0.7647058823529411,
+      "always_ship_b": 0.4117647058823529,
+      "random_three_way": 0.66775,
+      "random_direction": 0.6169470588235295
+    }
+  },
+  "meta": {
+    "qwen15_blind": {
+      "n_per_arm": 150,
+      "model_calls_this_run": 69,
+      "cache_hits": 10281,
+      "seconds_this_run": 25.2,
+      "label": "Qwen2.5-1.5B, blind prompt"
+    },
+    "qwen15_persona": {
+      "n_per_arm": 150,
+      "model_calls_this_run": 7360,
+      "cache_hits": 2990,
+      "seconds_this_run": 1556.6,
+      "label": "Qwen2.5-1.5B, real-respondent personas"
+    },
+    "llama32_1b_persona": {
+      "n_per_arm": 150,
+      "model_calls_this_run": 7357,
+      "cache_hits": 2993,
+      "seconds_this_run": 1119.3,
+      "label": "Llama-3.2-1B, real-respondent personas"
+    },
+    "claude_blind": {
+      "n_per_arm": 25,
+      "model_calls_this_run": 69,
+      "label": "Claude Opus 5.5 (claude-opus-5-5), blind prompt",
+      "backend": "claude-cli",
+      "model": "claude-opus-5-5",
+      "answer_scoring": "Claude-stated option probabilities (JSON), one sampled answer per respondent"
+    },
+    "claude_persona": {
+      "n_per_arm": 25,
+      "model_calls_this_run": 1637,
+      "label": "Claude Opus 5.5 (claude-opus-5-5), real-respondent personas",
+      "backend": "claude-cli",
+      "model": "claude-opus-5-5",
+      "answer_scoring": "Claude-stated option probabilities (JSON), one sampled answer per respondent"
+    }
+  }
+}
